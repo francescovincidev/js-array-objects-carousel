@@ -32,14 +32,13 @@ img{
 
 
 /* content */
+
 .imgs{
     position: relative;
     margin: 0;
-
     width: 500px;
     height: 300px;
     flex-shrink: 0;
-
 }
 
 .single-img{
@@ -91,7 +90,6 @@ img{
 /* small images */
 .small-imgs{
     position: relative;
-
     height: 300px;
     flex-shrink: 0;
 }
@@ -105,3 +103,15 @@ img{
 .opacity{
     filter: brightness(50%)
 }
+
+.buttons{
+    margin: 10px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.buttons button{
+    padding: 10px 20px;
+
+}
+

@@ -103,12 +103,41 @@ lower.addEventListener("click", function () {
 // bottone su
 upper.addEventListener("click", beforeImgs);
 
+
 // blocchiamo lo scorrimento automatico al click
 upper.addEventListener("click", function () {
 
     clearInterval(interval);
 
 })
+
+// Bottoni start e stop
+const btnStart = document.querySelector(".btn-start");
+const btnStop = document.querySelector(".btn-stop");
+// per evitare il bug dello start (che accellera la velocità del cambio delle immagini) creiamo una variabile booleana
+let stopClicked = false;
+// bottone start
+btnStart.addEventListener("click", function () {
+    // la variabile aggiunge la funzionalita al pulsante start solo quando è stato premuto lo stop, e si disabilita se viene cliccato start
+    if (stopClicked) {
+        nextImgs();
+        interval = setInterval(nextImgs, 3000);
+        stopClicked = false;
+
+    }
+
+})
+
+
+
+// bottone stop
+btnStop.addEventListener("click", function () {
+
+    clearInterval(interval);
+    stopClicked = true;
+
+})
+
 
 
 
